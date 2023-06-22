@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-06-2023 a las 19:04:26
+-- Tiempo de generación: 23-06-2023 a las 01:06:14
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -29,6 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `ingresos` (
   `id` int(11) NOT NULL,
+  `propietario` varchar(255) NOT NULL,
+  `telefono` int(11) NOT NULL,
+  `fecha_vencimiento` varchar(255) NOT NULL,
+  `total_a_pagar` int(255) NOT NULL,
   `placa` varchar(255) NOT NULL,
   `tipo_vehiculo` varchar(255) NOT NULL,
   `tipo_pago` varchar(255) NOT NULL,
@@ -41,11 +45,11 @@ CREATE TABLE `ingresos` (
 -- Volcado de datos para la tabla `ingresos`
 --
 
-INSERT INTO `ingresos` (`id`, `placa`, `tipo_vehiculo`, `tipo_pago`, `fecha_ingreso`, `nombre_espacio`, `estado`) VALUES
-(1, 'KNH28F', 'Moto', 'Dia', 'Mon Jun 19 23:24:51 COT 2023', 'm1', 'activo'),
-(2, 'ANM548', 'Carro', 'Hora', 'Mon Jun 19 23:26:58 COT 2023', 'c9', 'activo'),
-(3, 'ALB47F', 'Moto', 'Dia', 'Thu Jun 22 10:42:17 COT 2023', 'M2', 'activo'),
-(4, 'MHL49G', 'Carro', 'Dia', 'Thu Jun 22 10:43:06 COT 2023', 'C1', 'activo');
+INSERT INTO `ingresos` (`id`, `propietario`, `telefono`, `fecha_vencimiento`, `total_a_pagar`, `placa`, `tipo_vehiculo`, `tipo_pago`, `fecha_ingreso`, `nombre_espacio`, `estado`) VALUES
+(1, '', 0, '', 0, 'KNH28F', 'Moto', 'Dia', 'Mon Jun 19 23:24:51 COT 2023', 'm1', 'activo'),
+(2, '', 0, '', 0, 'ANM548', 'Carro', 'Hora', 'Mon Jun 19 23:26:58 COT 2023', 'c9', 'activo'),
+(3, '', 0, '', 0, 'ALB47F', 'Moto', 'Dia', 'Thu Jun 22 10:42:17 COT 2023', 'M2', 'activo'),
+(4, '', 0, '', 0, 'MHL49G', 'Carro', 'Dia', 'Thu Jun 22 10:43:06 COT 2023', 'C1', 'activo');
 
 -- --------------------------------------------------------
 
